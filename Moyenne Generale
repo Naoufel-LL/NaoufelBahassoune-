@@ -1,0 +1,21 @@
+name=input("enter votre nom : ")
+x = input("entrer votre note national : ")
+y = input("enter votre  note regional : ")
+z = input("entrer votre note continu  : ")
+def moyen(x, y, z):
+    moy = float(x) * 2 / 4 + float(y) / 4 + float(z) / 4
+    return moy
+e :float = moyen(x, y, z)
+print("Votre note moyenne est : ")
+print(e)
+if e <= 11.99:
+    print("acceptable")
+if e >= 12 and e < 14:
+    print("assez bien")
+if e >= 14 and e < 16:
+    print("bien")
+if e>=16:
+    print("exelent")
+a=[x,y,z]
+a.append(name)
+print(a)

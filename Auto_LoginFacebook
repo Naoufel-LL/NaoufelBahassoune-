@@ -1,0 +1,24 @@
+import pyautogui
+import time
+pyautogui.click(918,46)
+pyautogui.typewrite("facebook.com")
+pyautogui.typewrite(['enter'])
+time.sleep(5)
+print('Type 1 for old login ')
+print('Type 2 for new login')
+choice=int(input('wich do login do you get ? :'))
+if choice==1:
+  pyautogui.click(898,150)
+  pyautogui.typewrite("naoufelbahassoune")
+  pyautogui.click(1022,150)
+  pyautogui.typewrite("*******")
+  pyautogui.typewrite(['enter'])
+if choice==2:
+    pyautogui.click(901, 220)
+    pyautogui.typewrite("naoufelbahassoune")
+    pyautogui.click(952, 286)
+    pyautogui.typewrite("*******")
+    pyautogui.typewrite(['enter'])
+
+#name (898,150)
+#pass (1022,150)

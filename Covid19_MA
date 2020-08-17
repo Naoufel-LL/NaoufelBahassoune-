@@ -1,0 +1,11 @@
+from covid19_morocco import covid19
+import win10toast
+confirmed_count=covid19.confirmed_people()
+deaths_count=covid19.deaths_people()
+recoverd_count=covid19.recoverd_people()
+toaster=win10toast.ToastNotifier()
+toaster.show_toast('Covid Today in Morocco 🚑👨‍⚕️',f'Confirmed cases 😐 : {confirmed_count}',duration=5)
+toaster.show_toast('Covid Today in Morocco 🚑👨‍⚕️',f'Total Deaths 😢: {deaths_count}',duration=5)
+toaster.show_toast('Covid Today in Morocco 🚑👨‍⚕️',f'Total Recoverd 😀💪:{recoverd_count}',duration=5)
+toaster.show_toast('I give you an advice 😀','Stay at Home and Learn Python 😀👨‍💻',duration=5)
+

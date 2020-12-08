@@ -1,9 +1,10 @@
 from prettytable import PrettyTable
+from prettytable import MSWORD_FRIENDLY
 table=PrettyTable()
 table.field_names=['|N|','Name','Percentage','Grade']
 nbr=int(input('Enter the numbers of students : '))
 for i in range(nbr):
-    name=(input('Enter a student : '))
+    name=str((input('Enter a student : ')))
     perc=float((input('Enter the percentage : ')))
     if perc<=100.0 and perc>=96.50:
       table.add_row([i+1,name,perc,'A+'])
@@ -44,4 +45,6 @@ for i in range(nbr):
     elif perc <59.5 :
         table.add_row([i + 1, name, perc, 'F'])
         i += 1
-print(table)
+table.reversesort = True
+print(table.get_string(sortby="Percentage"))
+

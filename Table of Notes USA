@@ -46,5 +46,8 @@ for i in range(nbr):
         table.add_row([i + 1, name, perc, 'F'])
         i += 1
 table.reversesort = True
+data = table.get_string()
+with open('TEST.txt', 'w') as f:
+    f.write(data)
 print(table.get_string(sortby="Percentage"))
 
